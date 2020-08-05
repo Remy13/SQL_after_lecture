@@ -141,11 +141,11 @@ SELECT * FROM artist ORDER BY name ASC LIMIT 5;
 
 #4
 
-???
+SELECT * FROM artist WHERE name LIKE 'Black%';
 
 #5
 
-???
+SELECT * FROM artist WHERE name LIKE '%Black%';
 
 
 
@@ -162,6 +162,60 @@ SELECT MAX(birth_date) from employee;
 #3
 
 SELECT MIN(birth_date) from employee;
+
+#4
+
+SELECT employee_id FROM employee WHERE first_name = 'Nancy' AND last_name = 'Edwards';
+SELECT * FROM employee
+
+#5
+
+SELECT COUNT(*) FROM employee WHERE city = 'Lethbridge';
+
+
+
+Table - invoice
+
+#1
+SELECT COUNT(*) FROM invoice WHERE billing_country = 'USA';
+
+#2
+
+SELECT MAX(total) FROM invoice;
+
+#3
+
+SELECT MIN(total) FROM invoice;
+
+#4
+
+SELECT * FROM invoice WHERE TOTAL > 5;
+
+#5 
+
+SELECT * FROM invoice WHERE TOTAL < 5;
+
+#6
+
+SELECT * FROM invoice WHERE billing_state IN ('CA', 'TX', 'AZ');
+
+#7
+
+SELECT AVG (total) FROM invoice;
+
+#8
+
+SELECT SUM (total) FROM invoice;
+
+
+
+
+
+
+
+
+
+
 
 
 
